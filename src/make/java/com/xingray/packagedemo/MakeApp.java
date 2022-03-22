@@ -4,8 +4,8 @@ package com.xingray.packagedemo;
 import com.xingray.commandexecutor.CommandExecutor;
 import com.xingray.commandexecutor.CommandResult;
 import com.xingray.commandexecutor.JavaRuntimeCommandExecutor;
-import com.xingray.packagedemo.command.JDepsCommand;
-import com.xingray.packagedemo.command.JPackageCommand;
+import com.xingray.javacommand.JDepsCommand;
+import com.xingray.javacommand.JPackageCommand;
 
 import java.nio.charset.Charset;
 import java.util.List;
