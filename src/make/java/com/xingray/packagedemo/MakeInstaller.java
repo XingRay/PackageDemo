@@ -4,13 +4,14 @@ package com.xingray.packagedemo;
 import com.xingray.commandexecutor.CommandExecutor;
 import com.xingray.commandexecutor.CommandResult;
 import com.xingray.commandexecutor.JavaRuntimeCommandExecutor;
-import com.xingray.packagedemo.command.JDepsCommand;
-import com.xingray.packagedemo.command.JPackageCommand;
+import com.xingray.javacommand.JDepsCommand;
+import com.xingray.javacommand.JPackageCommand;
 
 import java.nio.charset.Charset;
 import java.util.List;
 
-public class Make {
+public class MakeInstaller {
+
     public static void main(String[] args) {
         try {
 
@@ -34,23 +35,19 @@ public class Make {
             String addModules = commandResult.getResult();
             System.out.println("addModules:" + addModules);
 
-
-            String name = "PackageDemo";
-            String vendor = "xingray";
-
             JPackageCommand jPackageCommand = new JPackageCommand();
-            jPackageCommand.setIcon("./src/main/resources/images/launcher.ico");
-            jPackageCommand.setDest("./output/package");
-            jPackageCommand.setName(name);
-            jPackageCommand.setAppVersion("1.0.0");
-            jPackageCommand.setCopyright("xingray.com");
-            jPackageCommand.setDescription("java package demo");
-            jPackageCommand.setVendor(vendor);
+            jPackageCommand.setIcon(PackageConfig.ICON_PATH);
+            jPackageCommand.setDest(PackageConfig.OUTPUT_PATH);
+            jPackageCommand.setName(PackageConfig.NAME);
+            jPackageCommand.setAppVersion(PackageConfig.APP_VERSION);
+            jPackageCommand.setCopyright(PackageConfig.COPYRIGHT);
+            jPackageCommand.setDescription(PackageConfig.DESCRIPTION);
+            jPackageCommand.setVendor(PackageConfig.VENDOR);
             jPackageCommand.setWinDirChooser(true);
             jPackageCommand.setWinShortcut(true);
-            jPackageCommand.setInstallDir(vendor + "/" + name);
+            jPackageCommand.setInstallDir(PackageConfig.VENDOR + "/" + PackageConfig.NAME);
             jPackageCommand.setResourceDir("./src/main/resources");
-            jPackageCommand.setModule("com.xingray.PackageDemo/com.xingray.packagedemo.app.Launcher");
+            jPackageCommand.setModule(PackageConfig.MODULE_AND_MAIN_CLASS);
             jPackageCommand.setAddModules(addModules);
             jPackageCommand.setModulePath(List.of("./target/classes", "./output/dependency"));
 

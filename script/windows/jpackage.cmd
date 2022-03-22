@@ -1,15 +1,13 @@
 jpackage ^
---verbose ^
---type app-image ^
 --icon ./src/main/resources/images/launcher.ico ^
+--type app-image ^
 --dest ./output/package ^
---temp ./output/package/tmp ^
---app-version 1.0.0 ^
+--name PackageDemo ^
+--app-version "1.0.0" ^
 --copyright "xingray.com" ^
 --description "java package demo" ^
---name PackageDemo ^
---vendor xingray ^
---module com.xingray.PackageDemo/com.xingray.packagedemo.app.Launcher ^
---add-modules java.base,java.desktop,java.scripting,jdk.jfr,jdk.unsupported ^
+--vendor "xingray" ^
 --resource-dir ./src/main/resources ^
+--module com.xingray.PackageDemo/com.xingray.packagedemo.app.Launcher ^
 --module-path ./target/classes;./output/dependency ^
+--add-modules java.base,java.desktop,java.instrument,java.logging,java.management,java.naming,java.scripting,jdk.compiler,jdk.jfr,jdk.unsupported ^
