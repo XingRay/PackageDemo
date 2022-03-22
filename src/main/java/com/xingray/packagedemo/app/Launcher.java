@@ -12,7 +12,11 @@ import java.time.format.DateTimeFormatter;
 public class Launcher {
     public static void main(String[] args) throws IOException {
         System.out.println("hello package");
-        File file = new File("app.log");
+        File logDir = new File("./output/log");
+        if (!logDir.exists()) {
+            logDir.mkdirs();
+        }
+        File file = new File("./output/log/app.log");
         if (!file.exists()) {
             file.createNewFile();
         }

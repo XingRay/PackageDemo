@@ -1,0 +1,13 @@
+jpackage ^
+--icon ./src/main/resources/images/launcher.ico ^
+--type app-image ^
+--runtime-image ./output/runtime ^
+--dest ./output/package ^
+--name PackageDemo ^
+--app-version "1.0.0" ^
+--copyright "xingray.com" ^
+--description "java package demo" ^
+--vendor "xingray" ^
+--resource-dir ./src/main/resources ^
+--module com.xingray.PackageDemo/com.xingray.packagedemo.app.Launcher ^
+--module-path ./target/classes;./output/dependency ^
