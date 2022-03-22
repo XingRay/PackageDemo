@@ -33,6 +33,12 @@
             <version>1.18.22</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.xingray</groupId>
+            <artifactId>CommandExecutor</artifactId>
+            <version>0.0.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 

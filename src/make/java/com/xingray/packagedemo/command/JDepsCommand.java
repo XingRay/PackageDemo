@@ -1,7 +1,8 @@
-package com.xingray.packagedemo;
+package com.xingray.packagedemo.command;
 
-import com.xingray.packagedemo.command.annotations.Command;
-import com.xingray.packagedemo.command.annotations.NoCommandKey;
+
+import com.xingray.commandexecutor.annotations.Command;
+import com.xingray.commandexecutor.annotations.NoCommandKey;
 
 import java.util.List;
 

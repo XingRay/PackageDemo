@@ -1,8 +1,11 @@
 package com.xingray.packagedemo;
 
-import com.xingray.packagedemo.command.CommandExecutor;
-import com.xingray.packagedemo.command.CommandResult;
-import com.xingray.packagedemo.command.JavaRuntimeCommandExecutor;
+
+import com.xingray.commandexecutor.CommandExecutor;
+import com.xingray.commandexecutor.CommandResult;
+import com.xingray.commandexecutor.JavaRuntimeCommandExecutor;
+import com.xingray.packagedemo.command.JDepsCommand;
+import com.xingray.packagedemo.command.JPackageCommand;
 
 import java.nio.charset.Charset;
 import java.util.List;

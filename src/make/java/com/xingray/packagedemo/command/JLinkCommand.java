@@ -1,7 +1,8 @@
-package com.xingray.packagedemo;
+package com.xingray.packagedemo.command;
 
-import com.xingray.packagedemo.command.annotations.Command;
-import com.xingray.packagedemo.command.annotations.KeyValueLinker;
+
+import com.xingray.commandexecutor.annotations.Command;
+import com.xingray.commandexecutor.annotations.KeyValueLinker;
 
 @Command("jlink")
 @KeyValueLinker(" ")
